@@ -1,4 +1,4 @@
-import { handleUserLogoutClick } from '../handlers/handleUserLogoutClick.js';
+import { handleUserLogoutClick } from "../handlers/handleUserLogoutClick.js";
 
 async function includeHTML(selector, file, callback) {
   const element = document.querySelector(selector);
@@ -6,9 +6,9 @@ async function includeHTML(selector, file, callback) {
   const res = await fetch(file);
   const html = await res.text();
   element.innerHTML = html;
-  if (typeof callback === 'function') callback();
+  if (typeof callback === "function") callback();
 }
-includeHTML('#header', '/public/partials/header.html');
-includeHTML('#footer', '/public/partials/footer.html', () => {
+includeHTML("#header", "/partials/header.html");
+includeHTML("#footer", "/partials/footer.html", () => {
   handleUserLogoutClick();
 });
