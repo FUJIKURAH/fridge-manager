@@ -1,5 +1,5 @@
 // -- auth/checkLogin.js
-const API_BASE = 'https://fridge-manager-backend.onrender.com'; // Render のURL
+const API_BASE = ''; // Render のURL
 
 (async () => {
   const path = window.location.pathname;
